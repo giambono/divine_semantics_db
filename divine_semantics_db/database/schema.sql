@@ -28,6 +28,18 @@ CREATE TABLE type (
 -- Insert predefined values
 INSERT INTO type (name) VALUES ('TEXT'), ('commentary'), ('outline');
 
+CREATE TABLE weighted_embeddings (
+                                     cantica_id INT,
+                                     canto INT,
+                                     start_verse INT,
+                                     end_verse INT,
+                                     type_id INT,
+                                     model_name VARCHAR(50), -- Name of the embedding model
+                                     weight_set_name VARCHAR(50), -- Name of the weight set
+                                     weighted_embedding JSON, -- Store embeddings as JSON
+                                     PRIMARY KEY (cantica_id, canto, start_verse, end_verse, model_name, weight_set_name)
+);
+
 -- Main table linking everything
 CREATE TABLE divine_comedy (
                                id INT AUTO_INCREMENT PRIMARY KEY,

@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 from pandas.io.formats.excel import ExcelCell
 
 import config
-
 from divine_semantics_db.scripts.utils import get_or_create_id
 
 
@@ -23,9 +22,6 @@ DB_CONFIG = {
     "database": os.getenv("DB_NAME"),
 }
 
-# Mapping cantica names to IDs
-CANTICA_MAP = {"Inferno": 1, "Purgatorio": 2, "Paradiso": 3}
-
 # Load CSV
 EXCEL_FILE = os.path.join(config.APP_DIR, "data/dante_original.xlsx")  # Adjust if needed
 df = pd.read_excel(EXCEL_FILE)
@@ -39,7 +35,7 @@ try:
 
     # Insert translations into the database
     for _, row in df.iterrows():
-        cantica_id = CANTICA_MAP.get(row["cantica"], None)
+        cantica_id = config.CANTICA_MAP.get(row["cantica"], None)
         if cantica_id is None:
             print(f"Skipping unknown cantica: {row['cantica']}")
             continue

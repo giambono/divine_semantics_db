@@ -2,10 +2,8 @@ import mysql.connector
 import os
 import pandas as pd
 from dotenv import load_dotenv
-from pandas.io.formats.excel import ExcelCell
 
 import config
-
 from divine_semantics_db.scripts.utils import get_or_create_id
 
 # Load environment variables
@@ -19,11 +17,9 @@ DB_CONFIG = {
     "database": os.getenv("DB_NAME"),
 }
 
-# Mapping cantica names to IDs
-CANTICA_MAP = {"Inferno": 1, "Purgatorio": 2, "Paradiso": 3}
 
 # Load CSV
-EXCEL_FILE = os.path.join(config.APP_DIR, "data/outlines.xlsx")  # Adjust if needed
+EXCEL_FILE = os.path.join(config.APP_DIR, "data/outlines.xlsx")
 df = pd.read_excel(EXCEL_FILE)
 
 try:
@@ -32,7 +28,7 @@ try:
 
     # Insert translations into the database
     for _, row in df.iterrows():
-        cantica_id = CANTICA_MAP.get(row["cantica"], None)
+        cantica_id = config.CANTICA_MAP.get(row["cantica"], None)
         if cantica_id is None:
             print(f"Skipping unknown cantica: {row['cantica']}")
             continue
@@ -47,9 +43,24 @@ try:
         text = row["text"]
         if text:
             cursor.execute(
-                """INSERT INTO divine_comedy 
+                """
+                SELECT COUNT(*) FROM divine_comedy 
+                WHERE cantica_id = %s AND canto = %s AND start_verse = %s AND end_verse = %s AND author_id = %s AND type_id = %s
+                """,
+                (cantica_id, canto, start_verse, end_verse, author_id, type_id),
+            )
+
+            if cursor.fetchone()[0] > 0:
+                print(f"Skipping existing entry: {row}")
+                continue
+
+            cursor.execute(
+                """
+                INSERT INTO divine_comedy 
                 (cantica_id, canto, start_verse, end_verse, text, author_id, type_id)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)""",
+                VALUES (%s, %s, %s, %s, %s, %s, %s)
+                ON DUPLICATE KEY UPDATE text = VALUES(text)
+                """,
                 (cantica_id, canto, start_verse, end_verse, text, author_id, type_id),
             )
 
