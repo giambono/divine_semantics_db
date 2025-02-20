@@ -10,7 +10,7 @@ from divine_semantics_db.scripts.utils import get_or_create_id_sqlite
 load_dotenv()
 
 # SQLite database file (same as previous scripts)
-DB_FILE = config.DB_PATH
+DB_FILE = config.DB_FILE
 
 # Load CSV
 EXCEL_FILE = os.path.join(config.APP_DIR, "data/outlines.csv")

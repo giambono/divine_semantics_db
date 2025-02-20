@@ -1,2 +1,4 @@
 /.env
 /venv/
+/divine_semantics_db/database/divine_comedy.db
+/sandbox/

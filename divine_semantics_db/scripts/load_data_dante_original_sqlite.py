@@ -13,7 +13,7 @@ TYPE = "TEXT"
 load_dotenv()
 
 # SQLite database file
-DB_FILE = config.DB_PATH
+DB_FILE = config.DB_FILE
 
 # Load CSV
 EXCEL_FILE = os.path.join(config.APP_DIR, "data/dante_original.csv")  # Adjust if needed
