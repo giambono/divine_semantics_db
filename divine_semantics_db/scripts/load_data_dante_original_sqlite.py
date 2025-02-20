@@ -13,11 +13,11 @@ TYPE = "TEXT"
 load_dotenv()
 
 # SQLite database file
-DB_FILE = os.path.join(config.APP_DIR, "data/divine_comedy.db")
+DB_FILE = config.DB_PATH
 
 # Load CSV
-EXCEL_FILE = os.path.join(config.APP_DIR, "data/dante_original.xlsx")  # Adjust if needed
-df = pd.read_excel(EXCEL_FILE)
+EXCEL_FILE = os.path.join(config.APP_DIR, "data/dante_original.csv")  # Adjust if needed
+df = pd.read_csv(EXCEL_FILE, sep=";", encoding="utf-8")
 
 try:
     conn = sqlite3.connect(DB_FILE)
@@ -39,6 +39,13 @@ try:
     )
 
     cursor.execute(
+        """CREATE TABLE IF NOT EXISTS cantica (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT UNIQUE
+        )"""
+    )
+
+    cursor.execute(
         """CREATE TABLE IF NOT EXISTS divine_comedy (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             cantica_id INTEGER,
@@ -56,12 +63,19 @@ try:
     author_id = get_or_create_id_sqlite(cursor, "author", "name", AUTHOR)
     type_id = get_or_create_id_sqlite(cursor, "type", "name", TYPE)
 
+    cantiche = ["Inferno", "Purgatorio", "Paradiso"]
+    for cantica_name in cantiche:
+        get_or_create_id_sqlite(cursor, "cantica", "name", cantica_name)
+
     # Insert translations into the database
     for _, row in df.iterrows():
-        cantica_id = config.CANTICA_MAP.get(row["cantica"], None)
-        if cantica_id is None:
-            print(f"Skipping unknown cantica: {row['cantica']}")
+        cantica_name = row["cantica"]
+        cursor.execute("SELECT id FROM cantica WHERE name=?", (cantica_name,))
+        result = cursor.fetchone()
+        if result is None:
+            print(f"Skipping unknown cantica {cantica_name}")
             continue
+        cantica_id = result[0]
 
         canto = int(row["canto"])
         start_verse, end_verse = map(int, row["verse"].split("-"))
