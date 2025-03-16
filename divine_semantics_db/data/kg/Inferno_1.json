@@ -1,0 +1,933 @@
+[
+  {
+    "tercet": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita.",
+    "nodes": [
+      {
+        "id": "selva oscura",
+        "type": "Location",
+        "properties": {
+          "descrizione": "selva oscura",
+          "versi": [
+            "Inferno 1:1-3"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "diritta via",
+        "type": "Location",
+        "properties": {
+          "descrizione": "la diritta via",
+          "versi": [
+            "Inferno 1:1-3"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:1-3",
+        "target": "selva oscura",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "1-3",
+          "canto": "1"
+        }
+      },
+      {
+        "source": "Inferno 1:1-3",
+        "target": "diritta via",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "1-3",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Ahi quanto a dir qual era è cosa dura esta selva selvaggia e aspra e forte che nel pensier rinova la paura!",
+    "nodes": [
+      {
+        "id": "selva selvaggia",
+        "type": "Location",
+        "properties": {
+          "descrizione": "selva selvaggia, aspra e forte",
+          "versi": [
+            "Inferno 1:4-6"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:4-6",
+        "target": "selva selvaggia",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "4-6",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Tant’è amara che poco è più morte; ma per trattar del ben ch’i’ vi trovai, dirò de l’altre cose ch’i’ v’ ho scorte.",
+    "nodes": [
+      {
+        "id": "selva",
+        "type": "Location",
+        "properties": {
+          "descrizione": "selva",
+          "verses": [
+            "Inferno 1:7-9"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Ben",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Divinità",
+          "identità_storica": "Riferimento al Sommo Bene, cioè Dio",
+          "verses": [
+            "Inferno 1:7-9"
+          ],
+          "tema": "teologico"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:7-9",
+        "target": "selva",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "7-9",
+          "canto": "1"
+        }
+      },
+      {
+        "source": "Inferno 1:7-9",
+        "target": "Ben",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "7-9",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Io non so ben ridir com’i’ v’intrai, tant’era pien di sonno a quel punto che la verace via abbandonai.",
+    "nodes": [
+      {
+        "id": "verace via",
+        "type": "Location",
+        "properties": {
+          "descrizione": "la verace via",
+          "versi": [
+            "Inferno 1:10-12"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:10-12",
+        "target": "verace via",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "10-12",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Ma poi ch’i’ fui al piè d’un colle giunto, là dove terminava quella valle che m’avea di paura il cor compunto,",
+    "nodes": [
+      {
+        "id": "colle",
+        "type": "Location",
+        "properties": {
+          "descrizione": "colle",
+          "versi": [
+            "Inferno 1:13-15"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "valle",
+        "type": "Location",
+        "properties": {
+          "descrizione": "valle che terminava",
+          "versi": [
+            "Inferno 1:13-15"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:13-15",
+        "target": "colle",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "13-15",
+          "canto": "1"
+        }
+      },
+      {
+        "source": "Inferno 1:13-15",
+        "target": "valle",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "13-15",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "guardai in alto e vidi le sue spalle vestite già de’ raggi del pianeta che mena dritto altrui per ogne calle.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Allor fu la paura un poco queta, che nel lago del cor m’era durata la notte ch’i’ passai con tanta pieta.",
+    "nodes": [
+      {
+        "id": "lago del cor",
+        "type": "Location",
+        "properties": {
+          "descrizione": "lago metaforico del cuore",
+          "versi": [
+            "Inferno 1:19-21"
+          ],
+          "tema": "paura"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:19-21",
+        "target": "lago del cor",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "19-21",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "E come quei che con lena affannata, uscito fuor del pelago a la riva, si volge a l’acqua perigliosa e guata,",
+    "nodes": [
+      {
+        "id": "pelago",
+        "type": "Location",
+        "properties": {
+          "descrizione": "pelago",
+          "versi": [
+            "Inferno 1:22-24"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "riva",
+        "type": "Location",
+        "properties": {
+          "descrizione": "riva",
+          "versi": [
+            "Inferno 1:22-24"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "acqua perigliosa",
+        "type": "Location",
+        "properties": {
+          "descrizione": "acqua perigliosa",
+          "versi": [
+            "Inferno 1:22-24"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:22-24",
+        "target": "pelago",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "22-24",
+          "canto": "1"
+        }
+      },
+      {
+        "source": "Inferno 1:22-24",
+        "target": "riva",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "22-24",
+          "canto": "1"
+        }
+      },
+      {
+        "source": "Inferno 1:22-24",
+        "target": "acqua perigliosa",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "22-24",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "così l’animo mio, ch’ancor fuggiva, si volse a retro a rimirar lo passo che non lasciò già mai persona viva.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Poi ch’èi posato un poco il corpo lasso, ripresi via per la piaggia diserta, sì che ’l piè fermo sempre era ’l più basso.",
+    "nodes": [
+      {
+        "id": "piaggia diserta",
+        "type": "Location",
+        "properties": {
+          "descrizione": "piaggia diserta",
+          "versi": [
+            "Inferno 1:28-30"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:28-30",
+        "target": "piaggia diserta",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "28-30",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Ed ecco, quasi al cominciar de l'erta, una lonza leggera e presta molto, che di pel macolato era coverta;",
+    "nodes": [
+      {
+        "id": "lonza",
+        "type": "Animal",
+        "properties": {
+          "descrizione": "lonza leggera, di pel macolato",
+          "versi": [
+            "Inferno 1:31-33"
+          ],
+          "tema": "ostacolo"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:31-33",
+        "target": "lonza",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "31-33",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "e non mi si partia dinanzi al volto, anzi ’mpediva tanto il mio cammino, ch’i’ fui per ritornar più volte vòlto.",
+    "nodes": [
+      {
+        "id": "Narratore",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Narratore",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:34-36"
+          ],
+          "tema": "viaggio"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "lonza",
+        "target": "Narratore",
+        "type": "BLOCKS_PATH",
+        "properties": {
+          "versi": [
+            "Inferno 1:31-36"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Temp’era dal principio del mattino, e ’l sol montava ’n sù con quelle stelle ch’eran con lui quando l’amor divino",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "mosse di prima quelle cose belle; sì ch’a bene sperar m’era cagione di quella fiera a la gaetta pelle",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "l’ora del tempo e la dolce stagione; ma non sì che paura non mi desse la vista che m'apparve d'un leone.",
+    "nodes": [
+      {
+        "id": "leone",
+        "type": "Animal",
+        "properties": {
+          "descrizione": "leone",
+          "versi": [
+            "Inferno 1:43-45"
+          ],
+          "tema": "paura"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:43-45",
+        "target": "leone",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "43-45",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Questi parea che contra me venisse con la test’alta e con rabbiosa fame, sì che parea che l’aere ne tremesse.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Ed una lupa, che di tutte brame sembiava carca ne la sua magrezza, e molte genti fé già viver grame,",
+    "nodes": [
+      {
+        "id": "lupa",
+        "type": "Animal",
+        "properties": {
+          "descrizione": "lupa, carca ne la sua magrezza",
+          "versi": [
+            "Inferno 1:49-51"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Inferno 1:49-51",
+        "target": "lupa",
+        "type": "MENTIONS",
+        "properties": {
+          "numero_verso": "49-51",
+          "canto": "1"
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "questa mi porse tanto di gravezza con la paura ch’uscia di sua vista, ch’io perdei la speranza de l’altezza.",
+    "nodes": [],
+    "relationships": [
+      {
+        "source": "Narratore",
+        "target": "lupa",
+        "type": "ENCOUNTERS",
+        "properties": {
+          "versi": [
+            "Inferno 1:49-54"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "E qual è quei che volontieri acquista, e giugne ’l tempo che perder lo face, che ’n tutti suoi pensier piange e s’attrista;",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "tal mi fece la bestia sanza pace, che, venendomi ’ncontro, a poco a poco mi ripigneva là dove ’l sol tace.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Mentre ch’i’ rovinava in basso loco, dinanzi a li occhi mi si fu offerto chi per lungo silenzio parea fioco.",
+    "nodes": [
+      {
+        "id": "Sconosciuto",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:61-63"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Quando vidi costui nel gran diserto, \"Miserere di me\", gridai a lui, \"qual che tu sii, od ombra od omo certo!\"",
+    "nodes": [
+      {
+        "id": "Virgilio",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Guida",
+          "identità_storica": "Poeta latino",
+          "versi": [
+            "Inferno 1:61-66"
+          ],
+          "tema": "spirituale"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Narratore",
+        "target": "Virgilio",
+        "type": "ENCOUNTERS",
+        "properties": {
+          "versi": [
+            "Inferno 1:61-66"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Rispuosemi: \"Non omo, omo già fui, e li parenti miei furon lombardi, mantoani per patrïa ambedui.",
+    "nodes": [
+      {
+        "id": "Virgilio",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Guida",
+          "identità_storica": "Poeta latino",
+          "versi": [
+            "Inferno 1:61-69"
+          ],
+          "tema": "spirituale"
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Nacqui sub Iulio, ancor che fosse tardi, e vissi a Roma sotto ’l buono Augusto nel tempo de li dèi falsi e bugiardi.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Poeta fui, e cantai di quel giusto figliuol d’Anchise che venne di Troia, poi che ’l superbo Ilïón fu combusto.",
+    "nodes": [
+      {
+        "id": "Aeneas",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Eroe",
+          "identità_storica": "figliuol d'Anchise",
+          "versi": [
+            "Inferno 1:73-75"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Ilïón",
+        "type": "Location",
+        "properties": {
+          "descrizione": "città di Troia",
+          "versi": [
+            "Inferno 1:73-75"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Ma tu perché ritorni a tanta noia? perché non sali il dilettoso monte ch’è principio e cagion di tutta gioia?",
+    "nodes": [
+      {
+        "id": "dilettoso monte",
+        "type": "Location",
+        "properties": {
+          "descrizione": "monte principio di gioia",
+          "versi": [
+            "Inferno 1:76-78"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "\"Or se’ tu quel Virgilio e quella fonte che spandi di parlar sì largo fiume?\", rispuos’io lui con vergognosa fronte.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "\"O de li altri poeti onore e lume, vagliami ’l lungo studio e ’l grande amore che m’ ha fatto cercar lo tuo volume.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "\"Tu se’ lo mio maestro e ’l mio autore, tu se’ solo colui da cu’ io tolsi lo bello stilo che m’ ha fatto onore.",
+    "nodes": [],
+    "relationships": [
+      {
+        "source": "Virgilio",
+        "target": "Narratore",
+        "type": "GUIDES",
+        "properties": {
+          "versi": [
+            "Inferno 1:85-87"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "Vedi la bestia per cu’ io mi volsi; aiutami da lei, famoso saggio, ch’ella mi fa tremar le vene e i polsi.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "\"A te convien tenere altro vïaggio\", rispuose, poi che lagrimar mi vide, \"se vuo’ campar d’esto loco selvaggio;",
+    "nodes": [],
+    "relationships": [
+      {
+        "source": "Virgilio",
+        "target": "Narratore",
+        "type": "GUIDES",
+        "properties": {
+          "versi": [
+            "Inferno 1:91-93"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "ché questa bestia, per la qual tu gride, non lascia altrui passar per la sua via, ma tanto lo ’mpedisce che l’uccide;",
+    "nodes": [],
+    "relationships": [
+      {
+        "source": "lupa",
+        "target": "Narratore",
+        "type": "BLOCKS_PATH",
+        "properties": {
+          "versi": [
+            "Inferno 1:94-96"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "e ha natura sì malvagia e ria, che mai non empie la bramosa voglia, e dopo ’l pasto ha più fame che pria.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Molti son li animali a cui s’ammoglia, e più saranno ancora, infin che ’l veltro verrà, che la farà morir con doglia.",
+    "nodes": [
+      {
+        "id": "veltro",
+        "type": "Animal",
+        "properties": {
+          "descrizione": "animale predatore futuro",
+          "versi": [
+            "Inferno 1:100-102"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Questi non ciberà terra né peltro, ma sapïenza, amore e virtute, e sua nazion sarà tra feltro e feltro.",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "Di quella umile Italia fia salute per cui morì la vergine Cammilla, Eurialo e Turno e Niso di ferute.",
+    "nodes": [
+      {
+        "id": "Italia",
+        "type": "Location",
+        "properties": {
+          "descrizione": "umile Italia",
+          "versi": [
+            "Inferno 1:106-108"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Cammilla",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Vergine",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:106-108"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Eurialo",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:106-108"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Turno",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:106-108"
+          ],
+          "tema": ""
+        }
+      },
+      {
+        "id": "Niso",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:106-108"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Questi la caccerà per ogne villa, fin che l’avrà rimessa ne lo ’nferno, là onde ’nvidia prima dipartilla.",
+    "nodes": [
+      {
+        "id": "nferno",
+        "type": "Location",
+        "properties": {
+          "descrizione": "Inferno",
+          "versi": [
+            "Inferno 1:109-111"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Ond’io per lo tuo me’ penso e discerno che tu mi segui, e io sarò tua guida, e trarrotti di qui per loco etterno;",
+    "nodes": [
+      {
+        "id": "loco etterno",
+        "type": "Location",
+        "properties": {
+          "descrizione": "loco etterno",
+          "versi": [
+            "Inferno 1:112-114"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Virgilio",
+        "target": "Narratore",
+        "type": "GUIDES",
+        "properties": {
+          "versi": [
+            "Inferno 1:112-114"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "ove udirai le disperate strida, vedrai li antichi spiriti dolenti, ch’a la seconda morte ciascun grida;",
+    "nodes": [
+      {
+        "id": "spiriti dolenti",
+        "type": "Person",
+        "properties": {
+          "descrizione": "antichi spiriti doloranti",
+          "versi": [
+            "Inferno 1:115-117"
+          ],
+          "tema": "disperazione"
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "e vederai color che son contenti nel foco, perché speran di venire quando che sia a le beate genti.",
+    "nodes": [
+      {
+        "id": "foco",
+        "type": "Location",
+        "properties": {
+          "descrizione": "foco",
+          "versi": [
+            "Inferno 1:118-120"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "A le quai poi se tu vorrai salire, anima fia a ciò più di me degna: con lei ti lascerò nel mio partire;",
+    "nodes": [
+      {
+        "id": "anima",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:121-123"
+          ],
+          "tema": "anima degna"
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "ché quello imperador che là sù regna, perch’i’ fu’ ribellante a la sua legge, non vuol che ’n sua città per me si venga.",
+    "nodes": [
+      {
+        "id": "Imperador",
+        "type": "Person",
+        "properties": {
+          "ruolo": "Imperatore",
+          "identità_storica": "",
+          "versi": [
+            "Inferno 1:124-126"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Imperador",
+        "target": "Narratore",
+        "type": "JUDGES",
+        "properties": {
+          "versi": [
+            "Inferno 1:124-126"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "In tutte parti impera e quivi regge; quivi è la sua città e l’alto seggio: oh felice colui cu’ ivi elegge!",
+    "nodes": [],
+    "relationships": []
+  },
+  {
+    "tercet": "E io a lui: \"Poeta, io ti richeggio per quello Dio che tu non conoscesti, acciò ch’io fugga questo male e peggio,",
+    "nodes": [
+      {
+        "id": "Dio",
+        "type": "Person",
+        "properties": {
+          "ruolo": "",
+          "identità_storica": "Divinità",
+          "versi": [
+            "Inferno 1:130-132"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "Narratore",
+        "target": "Virgilio",
+        "type": "SEEK",
+        "properties": {
+          "versi": [
+            "Inferno 1:130-132"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "tercet": "che tu mi meni là dov’or dicesti, sì ch’io veggia la porta di san Pietro e color cui tu fai cotanto mesti",
+    "nodes": [
+      {
+        "id": "porta di san Pietro",
+        "type": "Location",
+        "properties": {
+          "descrizione": "porta di san Pietro",
+          "versi": [
+            "Inferno 1:133-135"
+          ],
+          "tema": ""
+        }
+      }
+    ],
+    "relationships": []
+  },
+  {
+    "tercet": "Allor si mosse, e io li tenni dietro.",
+    "nodes": [],
+    "relationships": []
+  }
+]

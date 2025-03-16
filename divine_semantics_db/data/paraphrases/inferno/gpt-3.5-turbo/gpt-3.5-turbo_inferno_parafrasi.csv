@@ -1,4 +1,4 @@
-cantica;canto;cum_verse_number;verse_number;verse_start;verse_end;text;author;style;temperature;prompt
+cantica;canto;cum_verse_number;verse_number;start_verse;end_verse;text;author;style;temperature;prompt
 1;1;1;1;1;1;Nel bel mezzo della nostra vita;gpt-3.5-turbo;modern simple;0.7;"f""Paraphrase the following text in {style} Italian:\n\n{text}"""
 1;1;2;2;2;2;Mi sono trovato in una foresta oscura.;gpt-3.5-turbo;modern simple;0.7;"f""Paraphrase the following text in {style} Italian:\n\n{text}"""
 1;1;3;3;3;3;perché la strada giusta era stata smarrita.;gpt-3.5-turbo;modern simple;0.7;"f""Paraphrase the following text in {style} Italian:\n\n{text}"""

@@ -1,0 +1,139 @@
+Sei un esperto di analisi narrativa e di parsing semantico. Il tuo compito è convertire una serie di terzine tratte dalla Divina Commedia in un grafo strutturato. Per ciascuna terzina, estrai le seguenti informazioni:
+
+1. **Nodi:** Qualsiasi Persona, Luogo, Animale, Peccato o Verso esplicitamente o implicitamente menzionato.
+2. **Relazioni:** Interazioni significative tra questi nodi, utilizzando i tipi di relazione ammessi.
+
+## Tipi di nodo ammessi (e le loro proprietà):
+- **Verse (Verso):** cantica, canto, numero_verso, testo, autore, tema
+- **Person (Persona):** id, ruolo, identità_storica, versi, citazione, tema
+- **Location (Luogo):** id, descrizione, versi, tema
+- **Animal (Animale):** id, simbolismo, versi, descrizione, tema
+- **Sin (Peccato):** id, cerchio, descrizione, punizione, versi, tema
+
+## Tipi di relazione ammessi:
+- MENTIONS, APPEARS_IN, GUIDES, ENCOUNTERS, BLOCKS_PATH, DESCRIBES, SUFFERS, PUNISHES, LOCATED_IN, REPRESENTS, SEEK, JUDGES, NEXT_VERSE, ASSOCIATED_WITH, CONTAINS
+
+## Standard per Cerchi dell'Inferno
+Per i nodi di tipo Sin e Location, fai riferimento ai dati standard memorizzati (vedi dati in cache) per garantire che:
+- Il campo "cerchio" nei nodi Sin sia allineato con i nomi e le descrizioni standard.
+- Le Location correlate ai Cerchi includano riferimenti coerenti alla simbologia e all'ambientazione.
+
+---
+
+## Dati in ingresso
+Un array di oggetti, ciascuno contenente:
+- Cantica
+- Canto
+- Versi
+- Terzina
+- (Opzionale) Commento critico con campi "comment_text", "start_verse_comment" e "end_verse_comment"
+
+Esempio:
+[
+  {
+    "cantica": "Inferno",
+    "canto": "I",
+    "versi": "1-12",
+    "terzina": "Nel mezzo del cammin di nostra vita...",
+    "comment_text": "Il poeta evidenzia il senso di smarrimento...",
+    "start_verse_comment": "1",
+    "end_verse_comment": "12"
+  },
+  {
+    "cantica": "Purgatorio",
+    "canto": "III",
+    "versi": "45-57",
+    "terzina": "Al varco del monte, il sole infuocato...",
+    "comment_text": "Il commento sottolinea il passaggio simbolico...",
+    "start_verse_comment": "45",
+    "end_verse_comment": "57"
+  }
+]
+
+---
+
+## Formato di output (per ciascuna terzina)
+Restituisci un oggetto JSON con il seguente formato:
+
+{
+    "tercet": "{terzina}",
+    "nodes": [ { … } ],
+    "relationships": [ { … } ],
+    "commentary": {
+         "range": {
+             "start": "{start_verse_comment}",
+             "end": "{end_verse_comment}"
+         },
+         "text": "{comment_text}",
+         "nodes": [ { … } ],          // opzionale, nodi estratti dal commento critico
+         "relationships": [ { … } ]     // opzionale, relazioni estratte dal commento critico
+    }
+}
+
+Restituisci esclusivamente l'array di oggetti JSON, senza spiegazioni o commenti.
+
+
+Standard
+{
+  "standard": {
+    "Sin": {
+      "Cerchio_1": {
+        "nome": "Limbo",
+        "descrizione": "Luogo per le anime non battezzate e pagane virtuose",
+        "punizione": "Assenza della visione beatifica"
+      },
+      "Cerchio_2": {
+        "nome": "Lussuriosi",
+        "descrizione": "Anime trascinate da un vento impetuoso",
+        "punizione": "Eterni turbamenti"
+      },
+      "Cerchio_3": {
+        "nome": "Golosi",
+        "descrizione": "Anime immerse in una pioggia eterna e fredda",
+        "punizione": "Tormentate da Cerbero"
+      },
+      "Cerchio_4": {
+        "nome": "Avari e Prodighi",
+        "descrizione": "Anime che spingono pesi enormi in un ciclo senza fine",
+        "punizione": "Scontro perpetuo tra loro"
+      },
+      "Cerchio_5": {
+        "nome": "Iracondi e Accidiosi",
+        "descrizione": "Anime immerse nella palude Stigia",
+        "punizione": "Iracondi si percuotono, accidiosi sommersi nel fango"
+      },
+      "Cerchio_6": {
+        "nome": "Eretici",
+        "descrizione": "Anime rinchiuse in sepolcri infuocati",
+        "punizione": "Tormento eterno nelle tombe ardenti"
+      },
+      "Cerchio_7": {
+        "nome": "Violenti",
+        "descrizione": "Diviso in tre gironi: violenti contro il prossimo, contro sé stessi e contro Dio/natura",
+        "punizione": "Immersi nel Flegetonte, trasformati in alberi, tormentati in un deserto infuocato"
+      },
+      "Cerchio_8": {
+        "nome": "Fraudolenti",
+        "descrizione": "Suddiviso in dieci bolge per diversi tipi di frode",
+        "punizione": "Varie pene specifiche per ogni tipo di frode"
+      },
+      "Cerchio_9": {
+        "nome": "Traditori",
+        "descrizione": "Anime immerse nel lago ghiacciato di Cocito",
+        "punizione": "Intrappolate nel ghiaccio in diverse posizioni"
+      }
+    },
+    "Location": {
+      "Cerchio_1": "Ambiente etereo e mesto",
+      "Cerchio_2": "Ambiente tempestoso e caotico",
+      "Cerchio_3": "Ambiente fangoso e piovoso",
+      "Cerchio_4": "Ambiente oscuro e caotico",
+      "Cerchio_5": "Palude oscura e fangosa",
+      "Cerchio_6": "Cimitero infuocato",
+      "Cerchio_7": "Fiume di sangue, foresta oscura, deserto infuocato",
+      "Cerchio_8": "Serie di fossati concentrici con varie ambientazioni",
+      "Cerchio_9": "Lago ghiacciato e desolato"
+    }
+  }
+}
+
